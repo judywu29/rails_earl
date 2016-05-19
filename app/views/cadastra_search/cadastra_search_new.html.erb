@@ -1,0 +1,23 @@
+
+<h2>Cadastra Search</h2>
+<h4>You can type the lot/plan (connects with comma) in the following text area, </h4>
+<table>
+  <tbody>
+  <%= form_for :cadastra_search, :url => { :action => "cadastra_search" }, :html => { :method => :post } do |f| %>
+
+
+      <tr><td><strong><%= f.label :lot_plan_list %></strong></td></tr>
+      <tr><td><%= f.text_area :lot_plan_list %></td></tr>
+      <tr><td></td></tr>
+      <tr><td><%= f.submit "Search", :id => "cadastra_search_submit" %></td></tr>
+  <% end %>
+
+  </tbody>
+</table>
+
+
+<h4>Or just upload a CSV file with lot plan numbers. </h4>
+<%= form_tag({:action => "upload"}, :multipart => true) do %>
+    <%= file_field_tag 'lot_plan_list' %>
+    <input name="commit" type="submit" value="Upload"/>
+<% end %>

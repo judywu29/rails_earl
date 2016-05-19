@@ -1,0 +1,14 @@
+
+<h2>Qld Lot Plan History Search</h2>
+<table>
+  <tbody>
+  <%= form_for :qld_lot_plan_search, :url => { :action => "lot_plan_search" }, :html => { :method => :post } do |f| %>
+
+
+        <tr><td><strong><%= f.label :lot_plan_number %></strong></td></tr>
+        <tr><td><%= f.text_field :lot_plan_number %></td></tr>
+        <tr><td></td></tr>
+        <tr><td><%= f.submit "Search", :id => "qld_lot_plan_history_search_submit" %></td></tr>
+  <% end %>
+  </tbody>
+</table>

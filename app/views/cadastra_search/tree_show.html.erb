@@ -1,0 +1,17 @@
+<html>
+<h2>Trees of all plan numbers</h2>
+
+<head>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <!--<script src="../../assets/javascripts/plan_nums_tree.js" type="text/javascript"></script>-->
+</head>
+
+<% @linkages.each do |linkage| %>
+
+  <%= content_tag :div, class: "tree", data: {linkage: linkage.to_json} do %>
+      <%= javascript_include_tag 'plan_nums_tree.js'%>
+  <% end %>
+<% end %>
+
+</html>
+

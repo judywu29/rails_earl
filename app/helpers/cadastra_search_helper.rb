@@ -1,0 +1,2 @@
+module CadastraSearchHelper
+end

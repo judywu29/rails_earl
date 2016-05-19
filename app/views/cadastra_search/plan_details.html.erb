@@ -1,0 +1,31 @@
+<h1>Plan Lots and Linkages of <%= @plan_number %></h1>
+
+<h3>Lots</h3>
+<strong><%= @lots %></strong>
+
+<h3>Linkages</h3>
+<table class="table">
+  <thead>
+  <tr>
+    <th class="plan_number">Plan</th>
+    <th class="Date">Date</th>
+    <th class="Surveyor">Surveyor</th>
+    <th class="Description">Description</th>
+    <th class="Compiled">Compiled</th>
+    <th class="FieldNoteFlag">FieldNoteFlag</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @linkages.each do |linkage| %>
+      <tr>
+        <td><%= linkage[:plan_number] %></td>
+        <td><%= linkage[:submission_date] %></td>
+        <td><%= linkage[:surveyor] %></td>
+        <td><%= linkage[:description] %></td>
+        <td><%= linkage[:compiled] %></td>
+        <td><%= linkage[:field_note_flag] %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

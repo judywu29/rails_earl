@@ -1,0 +1,2 @@
+module QldLotPlanSearchHelper
+end

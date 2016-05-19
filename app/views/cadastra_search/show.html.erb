@@ -1,0 +1,75 @@
+
+
+<h1>Cadastra Search Result</h1>
+<% if @plan_details.empty? ||@plan_details.nil? %>
+    <p>
+      No Results Found.
+    </p>
+
+<% else %>
+    <h3>All Plans</h3>
+
+    <%= link_to 'Tree of plan numbers', tree_show_cadastra_search_path(:id => params[:id] ) %>
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th class="plan_number">Plan</th>
+        <th class="Date">Date</th>
+        <th class="Surveyor">Surveyor</th>
+        <th class="Description">Description</th>
+        <th class="Compiled">Compiled</th>
+        <th class="FieldNoteFlag">FieldNoteFlag</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @plan_details.each_with_index do |plan_detail, index| %>
+          <tr>
+            <td>
+              <% if plan_detail[:linkage_plan_numbers]  && !plan_detail[:linkage_plan_numbers].empty? %>
+                  <%= link_to plan_detail[:plan_number], plan_details_cadastra_search_path(:index => index ) %>
+              <% else %>
+                  <%= plan_detail[:plan_number] %>
+              <% end %>
+            </td>
+            <td><%= plan_detail[:submission_date] %></td>
+            <td><%= plan_detail[:surveyor] %></td>
+            <td><%= plan_detail[:description] %></td>
+            <td><%= plan_detail[:compiled] %></td>
+            <td><%= plan_detail[:field_note_flag] %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+    <h3>Monuments</h3>
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th class="name">Name</th>
+        <th class="state">State</th>
+        <th class="type">Type</th>
+        <th class="condition">Condition</th>
+        <th class="geom_kwt">Geom_kwt</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @monuments.each do |monument| %>
+          <tr>
+            <td><%= monument[:name] %></td>
+            <td><%= monument[:state] %></td>
+            <td><%= monument[:monument_type] %></td>
+            <td><%= monument[:condition] %></td>
+            <td><%= monument[:geom] %></td>
+
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+<% end %>
+
+

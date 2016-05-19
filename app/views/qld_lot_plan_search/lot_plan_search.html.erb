@@ -1,0 +1,120 @@
+<h1>Qld Lot Plan History Search Result</h1>
+<% if @plan_detail.empty? ||@plan_detail.nil? %>
+    <p>
+      No Results Found.
+    </p>
+
+<% else %>
+    <h3>Plan Detail</h3>
+    <table class="table">
+      <thead>
+      <tr>
+        <th class="plan_number">Plan</th>
+        <th class="Date">Date</th>
+        <th class="Surveyor">Surveyor</th>
+        <th class="Description">Description</th>
+        <th class="Compiled">Compiled</th>
+        <th class="FieldNoteFlag">FieldNoteFlag</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td><%= @plan_detail[:plan_number] %></td>
+            <td><%= @plan_detail[:submission_date] %></td>
+            <td><%= @plan_detail[:surveyors][0] %></td>
+            <td><%= @plan_detail[:description] %></td>
+            <td><%= @plan_detail[:compiled] %></td>
+            <td><%= @plan_detail[:field_note_flag] %></td>
+          </tr>
+      </tbody>
+    </table>
+
+    <h3>Parcels</h3>
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th class="lot_plan_number">Parcel</th>
+        <th class="state">State</th>
+        <th class="class">Class</th>
+        <th class="geom_kwt">Geom_kwt</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @parcels.each do |parcel| %>
+        <tr>
+          <td><%= parcel[:lot_plan_number] %></td>
+          <td><%= parcel[:state] %></td>
+          <td><%= parcel[:klass] %></td>
+          <td><%= parcel[:geom_kwt] %></td>
+
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+    <h3>Observation Group</h3>
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th class="name">Name</th>
+        <th class="azimuth">Azimuth</th>
+        <th class="horiz_distance">Horiz Distance</th>
+        <th class="distance_type">Distance Type</th>
+        <th class="azimuth_type">Aziputh Type</th>
+        <th class="purpose">Purpose</th>
+        <th class="equipmentUsed">EquipmentUsed</th>
+        <th class="geom_kwt">Geom_kwt</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @observation_group.each do |obs| %>
+          <tr>
+            <td><%= obs[:name] %></td>
+            <td><%= obs[:azimuth] %></td>
+            <td><%= obs[:horiz_distance] %></td>
+            <td><%= obs[:distance_type] %></td>
+            <td><%= obs[:azimuth_type] %></td>
+            <td><%= obs[:purpose] %></td>
+            <td><%= obs[:equipmentUsed] %></td>
+            <td><%= obs[:geom_kwt] %></td>
+
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+    <h3>Monuments</h3>
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th class="name">Name</th>
+        <th class="state">State</th>
+        <th class="type">Type</th>
+        <th class="condition">Condition</th>
+        <th class="geom_kwt">Geom_kwt</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @monuments.each do |monument| %>
+          <tr>
+            <td><%= monument[:name] %></td>
+            <td><%= monument[:state] %></td>
+            <td><%= monument[:type] %></td>
+            <td><%= monument[:condition] %></td>
+            <td><%= monument[:geom_kwt] %></td>
+
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+<% end %>
+
+<%= link_to 'Back', lot_plan_search_new_qld_lot_plan_search_index_path %>
