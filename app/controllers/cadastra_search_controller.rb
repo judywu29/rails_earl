@@ -63,6 +63,7 @@ class CadastraSearchController < ApplicationController
         new_node.empty? ? (new_node = {name: number}) : new_node = {name: number, children: [new_node] }
       end
     end
+    @linkages = { name: 'root', children: @linkages }
     # puts @linkages.inspect
 
     # logger.debug @linkages.inspect

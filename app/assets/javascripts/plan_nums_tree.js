@@ -47,9 +47,9 @@
 //     ]
 // };
 
-var width = 1000;
-var height = 200;
-var maxLabel = 150;
+var width = 1800;
+var height = 1400;
+var maxLabel = 120;
 var duration = 500;
 var radius = 3;
 
@@ -206,26 +206,11 @@ function collapse(d){
 }
 
 // update(root);
-var linkages = $('.tree').data('linkage');
-// var number_of_tree = 1;
-// var distance;
-// linkages.forEach(function(linkage) {
-//
-//
-//     root = linkage;
-//     distance = height/linkages.length;
-//     root.x0 = distance * number_of_tree;
-//     root.y0 = 5 * number_of_tree;
-//
-//     root.children.forEach(collapse);
-//     update(root);
-//     ++number_of_tree;
-// } );
-
+var linkages = $('.tree').data('linkages');
 
 root = linkages;
 root.x0 = height / 2;
-root.y0 = 0;
+root.y0 = 5;
 
-root.children.forEach(collapse);
+// root.children.forEach(collapse);
 update(root)
