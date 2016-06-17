@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160331051953) do
+ActiveRecord::Schema.define(version: 20160524051754) do
 
   create_table "cadastra_searches", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -43,17 +43,19 @@ ActiveRecord::Schema.define(version: 20160331051953) do
 #   undefined method `[]' for nil:NilClass
 
   create_table "plan_details", force: :cascade do |t|
-    t.string   "plan_number",          null: false
+    t.string   "plan_number",                               null: false
     t.string   "description"
     t.string   "submission_date"
     t.string   "compiled"
     t.string   "field_note_flag"
     t.string   "surveyor"
     t.integer  "cadastra_search_id"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
     t.string   "lots"
     t.string   "linkage_plan_numbers"
+    t.text     "children_plan_number", default: "--- []\n"
+    t.text     "existing_parcels",     default: "--- []\n"
   end
 
   add_index "plan_details", ["plan_number"], name: "index_plan_details_on_plan_number"

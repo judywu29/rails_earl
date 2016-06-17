@@ -11,7 +11,7 @@
 
     <%= link_to 'Tree of plan numbers', tree_show_cadastra_search_path(:id => params[:id] ) %>
 
-    <table class="table">
+    <table class="table table-striped">
       <thead>
       <tr>
         <th class="plan_number">Plan</th>
@@ -20,24 +20,26 @@
         <th class="Description">Description</th>
         <th class="Compiled">Compiled</th>
         <th class="FieldNoteFlag">FieldNoteFlag</th>
+        <th class="existing parcels">Existing Parcels</th>
         <th></th>
       </tr>
       </thead>
       <tbody>
-      <% @plan_details.each_with_index do |plan_detail, index| %>
+      <% @plan_details.each do |plan_detail| %>
           <tr>
             <td>
-              <% if plan_detail[:linkage_plan_numbers]  && !plan_detail[:linkage_plan_numbers].empty? %>
-                  <%= link_to plan_detail[:plan_number], plan_details_cadastra_search_path(:index => index ) %>
+              <% if plan_detail.linkage_plan_numbers  && !plan_detail.linkage_plan_numbers.empty? %>
+                  <%= link_to plan_detail.plan_number, plan_details_cadastra_search_path(:plan_id => plan_detail.id ) %>
               <% else %>
-                  <%= plan_detail[:plan_number] %>
+                  <%= plan_detail.plan_number %>
               <% end %>
             </td>
-            <td><%= plan_detail[:submission_date] %></td>
-            <td><%= plan_detail[:surveyor] %></td>
-            <td><%= plan_detail[:description] %></td>
-            <td><%= plan_detail[:compiled] %></td>
-            <td><%= plan_detail[:field_note_flag] %></td>
+            <td><%= plan_detail.submission_date %></td>
+            <td><%= plan_detail.surveyor %></td>
+            <td><%= plan_detail.description %></td>
+            <td><%= plan_detail.compiled %></td>
+            <td><%= plan_detail.field_note_flag %></td>
+            <td><%= word_wrap(plan_detail.existing_parcels.join(","), :line_width => 10) %></td>
           </tr>
       <% end %>
       </tbody>

@@ -39,6 +39,10 @@ gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
 gem 'less-rails'
 
+gem 'react-rails'
+gem 'rgeo'
+gem 'rgeo-geojson'
+
 group :development, :test do
 
   gem 'rspec-rails'

@@ -10,14 +10,15 @@ class CadastraSearch < ActiveRecord::Base
 
   def load_to_db(parser)
     parser.plan_details.each do |detail|
-      self.plan_details << plan_detail = PlanDetail.create!(:plan_number=>detail[:plan_number],
-                                                            :description=>detail[:description],
-                                                            :submission_date=>detail[:submission_date],
-                                                            :compiled=>detail[:compiled],
-                                                            :field_note_flag=>detail[:field_note_flag],
-                                                            :surveyor=>detail[:surveyor],
-                                                            :lots =>detail[:lots].join("|"),
-                                                            :linkage_plan_numbers => detail[:linkage_plan_numbers].join("|"))
+      self.plan_details << plan_detail = PlanDetail.create!(:plan_number          =>detail[:plan_number],
+                                                            :description          =>detail[:description],
+                                                            :submission_date      =>detail[:submission_date],
+                                                            :compiled             =>detail[:compiled],
+                                                            :field_note_flag      =>detail[:field_note_flag],
+                                                            :surveyor             =>detail[:surveyor],
+                                                            :lots                 =>detail[:lots].join("|"),
+                                                            :linkage_plan_numbers =>detail[:linkage_plan_numbers].join("|"),
+                                                            :existing_parcels     =>detail[:existing_parcels])
 
     end
 
@@ -54,5 +55,6 @@ class CadastraSearch < ActiveRecord::Base
     parser.run
 
    load_to_db(parser)
+
   end
 end

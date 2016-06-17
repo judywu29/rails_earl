@@ -41,9 +41,9 @@ Rails.application.configure do
 
 
 
-  CADASTRA_SOAP_URL = "https://surveying.test.derm.qld.gov.au:2044/service/land/survey/CadastralDataService/1/soap"
-  HOST = "192.168.50.46"
-  PORT = "2044"
+  CADASTRA_SOAP_URL = "https://surveying.test.derm.qld.gov.au:8083/service/land/survey/CadastralDataService/1/soap"
+  HOST = "165.225.145.253"
+  PORT = "8083"
 
 
 end

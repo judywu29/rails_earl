@@ -4,10 +4,15 @@
 <head>
   <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 </head>
+<body>
 
-  <%= content_tag :div, class: "tree", data: {linkages: @linkages.to_json} do %>
-      <%= javascript_include_tag 'plan_nums_tree.js'%>
-  <% end %>
+<div id="movieNetwork"></div>
+<div id="movieInfo" class="panel_off"></div>
+
+<%= content_tag :div, id: "tree", data: {linkages: @linkages } do %>
+    <%= javascript_include_tag 'movie-network.js'%>
+<% end %>
+</body>
 
 </html>
 

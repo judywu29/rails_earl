@@ -3,5 +3,7 @@ class PlanDetail < ActiveRecord::Base
   # has_many :plan_lots, dependent: :destroy
   # has_one :plan_linkages, dependent: :destroy
 
+  # serialize :children_plan_number
+  serialize :existing_parcels
 
 end

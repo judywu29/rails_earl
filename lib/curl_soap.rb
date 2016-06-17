@@ -39,7 +39,7 @@ require 'curb'
       puts @curl.post_body
       @curl.http_post
       xml = Nokogiri::XML(res = @curl.body_str)
-      File.open("cadastra_cif_res_SP132927.xml", "a") {|f| f.puts res }
+      File.open("csv.xml", "a") {|f| f.puts res }
       puts res
 
       success_status = xml.xpath("//urn1:ResponseStatus/urn1:ReturnCode", {"xmlns:urn1" => "urn:au:gov:qld:nrm:schema:util"}).text
