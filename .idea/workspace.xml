@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28f356ba-207f-42c0-80bd-4f78ec3a3533" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/rails_dnrmearl.iml" afterPath="$PROJECT_DIR$/.idea/rails_dnrmearl.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/ci/setup.sh" afterPath="$PROJECT_DIR$/scripts/ci/setup.sh" />
     </list>
     <ignored path="rails_dnrmearl.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/scripts/ci/setup.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -186,11 +187,11 @@
         <option value="$PROJECT_DIR$/app/views/qld_lot_plan_search/lot_plan_search_new.html.erb" />
         <option value="$PROJECT_DIR$/app/models/qld_lot_plan_search.rb" />
         <option value="$PROJECT_DIR$/lib/cif_xml_parser.rb" />
-        <option value="$PROJECT_DIR$/scripts/ci/setup.sh" />
         <option value="$PROJECT_DIR$/README.rdoc" />
         <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/.buildkite/pipeline.yml" />
+        <option value="$PROJECT_DIR$/scripts/ci/setup.sh" />
       </list>
     </option>
   </component>
@@ -255,6 +256,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="rails_dnrmearl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rails_dnrmearl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rails_dnrmearl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -559,12 +574,12 @@
       <workItem from="1465512154075" duration="1874000" />
       <workItem from="1465963305257" duration="14000" />
       <workItem from="1466126210594" duration="2862000" />
-      <workItem from="1466635579755" duration="488000" />
+      <workItem from="1466635579755" duration="1068000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130593000" />
+    <option name="totallyTimeSpent" value="131173000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="59" y="-4" width="2501" height="1444" extended-state="6" />
@@ -961,7 +976,7 @@
     <entry file="file://$PROJECT_DIR$/scripts/ci/setup.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
           <folding />
         </state>
       </provider>
