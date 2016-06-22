@@ -1,4 +1,4 @@
-/usr/bin/ruby2.1 extconf.rb
+/home/judy/.rvm/rubies/ruby-2.1.6/bin/ruby -r ./siteconf20160623-25130-1bh7ah2.rb extconf.rb
 checking for curl-config... yes
 checking for curlinfo_appconnect_time... yes
 checking for curlinfo_redirect_time... yes
@@ -295,11 +295,15 @@ make "DESTDIR="
 compiling curb.c
 compiling curb_errors.c
 compiling curb_multi.c
+curb_multi.c: In function ‘ruby_curl_multi_perform’:
+curb_multi.c:688:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   VALUE hash = rbcm->requests;
+   ^
 compiling curb_easy.c
 compiling curb_postfield.c
 compiling curb_upload.c
 linking shared-object curb_core.so
 
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 curb_core.so ./.gem.20160623-9359-tjd4e3
+/usr/bin/install -c -m 0755 curb_core.so ./.gem.20160623-25130-15wz9ns
 installing default curb_core libraries

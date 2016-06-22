@@ -1,4 +1,4 @@
-/usr/bin/ruby2.1 extconf.rb
+/home/judy/.rvm/rubies/ruby-2.1.6/bin/ruby -r ./siteconf20160623-25130-1c2dvg4.rb extconf.rb
 creating Makefile
 
 make "DESTDIR=" clean
@@ -12,5 +12,5 @@ compiling threads.c
 linking shared-object byebug/byebug.so
 
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 byebug.so ./.gem.20160623-9359-krq780/byebug
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20160623-25130-im9wh0/byebug
 installing default byebug libraries

@@ -1,4 +1,4 @@
-/usr/bin/ruby2.1 extconf.rb
+/home/judy/.rvm/rubies/ruby-2.1.6/bin/ruby -r ./siteconf20160623-25130-s9e0rw.rb extconf.rb
 Using pkg-config version 1.1.7
 checking if the C compiler accepts ... yes
 Building nokogiri using packaged libraries.
@@ -27,11 +27,11 @@ If you are using Bundler, tell it to use the option:
 Note, however, that nokogiri is not fully compatible with arbitrary
 versions of libxml2 provided by OS/package vendors.
 ************************************************************************
-Extracting libxml2-2.9.4.tar.gz into tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.4... OK
+Extracting libxml2-2.9.4.tar.gz into tmp/x86_64-unknown-linux-gnu/ports/libxml2/2.9.4... OK
 Running 'configure' for libxml2 2.9.4... OK
 Running 'compile' for libxml2 2.9.4... OK
 Running 'install' for libxml2 2.9.4... OK
-Activating libxml2 2.9.4 (from /home/judy/RubymineProjects/rails_dnrmearl/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxml2/2.9.4)...
+Activating libxml2 2.9.4 (from /home/judy/RubymineProjects/rails_dnrmearl/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-unknown-linux-gnu/libxml2/2.9.4)...
 ************************************************************************
 IMPORTANT NOTICE:
 
@@ -51,11 +51,11 @@ If you are using Bundler, tell it to use the option:
     bundle config build.nokogiri --use-system-libraries
     bundle install
 ************************************************************************
-Extracting libxslt-1.1.29.tar.gz into tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.29... OK
+Extracting libxslt-1.1.29.tar.gz into tmp/x86_64-unknown-linux-gnu/ports/libxslt/1.1.29... OK
 Running 'configure' for libxslt 1.1.29... OK
 Running 'compile' for libxslt 1.1.29... OK
 Running 'install' for libxslt 1.1.29... OK
-Activating libxslt 1.1.29 (from /home/judy/RubymineProjects/rails_dnrmearl/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-pc-linux-gnu/libxslt/1.1.29)...
+Activating libxslt 1.1.29 (from /home/judy/RubymineProjects/rails_dnrmearl/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-unknown-linux-gnu/libxslt/1.1.29)...
 checking for main() in -llzma... no
 checking for xmlParseDoc() in libxml/parser.h... yes
 checking for xsltParseStylesheetDoc() in libxslt/xslt.h... yes
@@ -105,7 +105,7 @@ xml_document.c:535:15: warning: cast discards ‘const’ qualifier from pointer
                ^
 compiling xml_xpath_context.c
 compiling html_element_description.c
-In file included from /usr/include/ruby-2.1.0/ruby.h:33:0,
+In file included from /home/judy/.rvm/rubies/ruby-2.1.6/include/ruby-2.1.0/ruby.h:33:0,
                  from ./nokogiri.h:33,
                  from ./html_element_description.h:4,
                  from html_element_description.c:1:
@@ -113,7 +113,7 @@ html_element_description.c: In function ‘get_description’:
 html_element_description.c:252:40: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
    return Data_Wrap_Struct(klass, 0, 0, (void *)description);
                                         ^
-/usr/include/ruby-2.1.0/ruby/ruby.h:1019:35: note: in definition of macro ‘Data_Wrap_Struct’
+/home/judy/.rvm/rubies/ruby-2.1.6/include/ruby-2.1.0/ruby/ruby.h:1019:35: note: in definition of macro ‘Data_Wrap_Struct’
      rb_data_object_alloc((klass),(sval),(RUBY_DATA_FUNC)(mark),(RUBY_DATA_FUNC)(free))
                                    ^
 compiling xml_sax_parser_context.c
@@ -208,14 +208,18 @@ compiling nokogiri.c
 compiling xml_relax_ng.c
 compiling xml_schema.c
 compiling xml_sax_parser.c
+xml_sax_parser.c: In function ‘start_document’:
+xml_sax_parser.c:28:7: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+       VALUE version = ctxt->version ? NOKOGIRI_STR_NEW2(ctxt->version) : Qnil;
+       ^
 compiling xml_libxml2_hacks.c
 compiling xml_processing_instruction.c
 linking shared-object nokogiri/nokogiri.so
 Using pkg-config version 1.1.7
 Cleaning files only used during build.
-rm -rf /home/judy/RubymineProjects/rails_dnrmearl/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports
+rm -rf /home/judy/RubymineProjects/rails_dnrmearl/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ext/nokogiri/tmp/x86_64-unknown-linux-gnu/ports
 rm -rf /home/judy/RubymineProjects/rails_dnrmearl/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports
 
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nokogiri.so ./.gem.20160623-9359-1091gkp/nokogiri
+/usr/bin/install -c -m 0755 nokogiri.so ./.gem.20160623-25130-q4hcl1/nokogiri
 installing default nokogiri libraries

@@ -1,4 +1,4 @@
-/home/judy/.rvm/rubies/ruby-2.1.6/bin/ruby -r ./siteconf20160623-16925-11p1y5c.rb extconf.rb
+/home/judy/.rvm/rubies/ruby-2.1.6/bin/ruby -r ./siteconf20160623-25130-1uy2bj5.rb extconf.rb
 creating Makefile
 
 make "DESTDIR=" clean
@@ -8,5 +8,5 @@ compiling debug_inspector.c
 linking shared-object debug_inspector.so
 
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 debug_inspector.so ./.gem.20160623-16925-1duxpgq
+/usr/bin/install -c -m 0755 debug_inspector.so ./.gem.20160623-25130-nlkp8v
 installing default debug_inspector libraries
