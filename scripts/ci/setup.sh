@@ -1,7 +1,5 @@
 #!/bin/bash
 
 set -eu
-
 bundle install
-
-bundle exec rake db:reset
+KNAPSACK_GENERATE_REPORT=true bundle exec rake spec

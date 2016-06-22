@@ -1,0 +1,5 @@
+steps:
+  - name: ':github: rails_dnrmearl_judy'
+    command: 'scripts/ci/setup.sh && scripts/ci/parallel_specs.sh'
+    branches: 'master'
+    parallelism: 10
