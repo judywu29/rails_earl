@@ -1,4 +1,4 @@
-/home/judy/.rvm/rubies/ruby-2.1.6/bin/ruby -r ./siteconf20160623-25130-1qnejv8.rb extconf.rb
+/home/judy/.rvm/rubies/ruby-2.1.6/bin/ruby -r ./siteconf20160623-9525-wupr8t.rb extconf.rb
 checking for proj_api.h... yes
 checking for pj_init_plus() in proj_api.h... yes
 creating Makefile
@@ -10,5 +10,5 @@ compiling main.c
 linking shared-object rgeo/coord_sys/proj4_c_impl.so
 
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 proj4_c_impl.so ./.gem.20160623-25130-1vf0gff/rgeo/coord_sys
+/usr/bin/install -c -m 0755 proj4_c_impl.so ./.gem.20160623-9525-16xkx8e/rgeo/coord_sys
 installing default proj4_c_impl libraries

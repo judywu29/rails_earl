@@ -1,4 +1,4 @@
-/home/judy/.rvm/rubies/ruby-2.1.6/bin/ruby -r ./siteconf20160623-25130-1u375sa.rb extconf.rb
+/home/judy/.rvm/rubies/ruby-2.1.6/bin/ruby -r ./siteconf20160623-9525-rnnwhq.rb extconf.rb
 checking for sqlite3.h... yes
 checking for sqlite3_libversion_number() in -lsqlite3... yes
 checking for rb_proc_arity()... yes
@@ -25,5 +25,5 @@ compiling sqlite3.c
 linking shared-object sqlite3/sqlite3_native.so
 
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 sqlite3_native.so ./.gem.20160623-25130-kpeso/sqlite3
+/usr/bin/install -c -m 0755 sqlite3_native.so ./.gem.20160623-9525-o65h0e/sqlite3
 installing default sqlite3_native libraries

@@ -1,4 +1,4 @@
-/home/judy/.rvm/rubies/ruby-2.1.6/bin/ruby -r ./siteconf20160623-25130-s9e0rw.rb extconf.rb
+/home/judy/.rvm/rubies/ruby-2.1.6/bin/ruby -r ./siteconf20160623-9525-oew6ka.rb extconf.rb
 Using pkg-config version 1.1.7
 checking if the C compiler accepts ... yes
 Building nokogiri using packaged libraries.
@@ -221,5 +221,5 @@ rm -rf /home/judy/RubymineProjects/rails_dnrmearl/vendor/bundle/ruby/2.1.0/gems/
 rm -rf /home/judy/RubymineProjects/rails_dnrmearl/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports
 
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nokogiri.so ./.gem.20160623-25130-q4hcl1/nokogiri
+/usr/bin/install -c -m 0755 nokogiri.so ./.gem.20160623-9525-1ggljvq/nokogiri
 installing default nokogiri libraries

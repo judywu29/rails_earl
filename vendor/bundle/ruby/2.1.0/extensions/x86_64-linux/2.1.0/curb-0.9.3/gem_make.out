@@ -1,4 +1,4 @@
-/home/judy/.rvm/rubies/ruby-2.1.6/bin/ruby -r ./siteconf20160623-25130-1bh7ah2.rb extconf.rb
+/home/judy/.rvm/rubies/ruby-2.1.6/bin/ruby -r ./siteconf20160623-9525-1f7t089.rb extconf.rb
 checking for curl-config... yes
 checking for curlinfo_appconnect_time... yes
 checking for curlinfo_redirect_time... yes
@@ -305,5 +305,5 @@ compiling curb_upload.c
 linking shared-object curb_core.so
 
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 curb_core.so ./.gem.20160623-25130-15wz9ns
+/usr/bin/install -c -m 0755 curb_core.so ./.gem.20160623-9525-17bkanv
 installing default curb_core libraries
